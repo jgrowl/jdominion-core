@@ -48,7 +48,7 @@ public class StandardPlayer implements Player {
     public int getTotalBuys() {
         int totalBuys = 1;
         for (Card card : hand) {
-            totalBuys += card.buys();
+            totalBuys += card.getBuys();
         }
 
         return totalBuys;
@@ -57,7 +57,7 @@ public class StandardPlayer implements Player {
     public int getTotalActions() {
         int totalActions = 1;
         for (Card card : hand) {
-            totalActions += card.actions();
+            totalActions += card.getActions();
         }
 
         return totalActions;
@@ -66,7 +66,7 @@ public class StandardPlayer implements Player {
     public int getTotalCoins() {
         int totalCoins = 0;
         for (Card card : hand) {
-            totalCoins += card.coins();
+            totalCoins += card.getCoins();
         }
 
         return totalCoins;

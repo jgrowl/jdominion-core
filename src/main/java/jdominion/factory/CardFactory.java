@@ -1,6 +1,10 @@
 package jdominion.factory;
 
+import com.google.inject.Injector;
 import jdominion.card.Card;
+
+import java.io.File;
+import java.io.Reader;
 
 /**
  * User: jonathan
@@ -10,11 +14,10 @@ import jdominion.card.Card;
 public interface CardFactory {
 
     /**
-     * Creates a card by a given card name.
+     * Creates a card from file.
      *
-     * @param cardName
      * @return
      */
-    public Card createCard(String path, String cardName);
+    public Card createCard(File cardFolder);
 
 }

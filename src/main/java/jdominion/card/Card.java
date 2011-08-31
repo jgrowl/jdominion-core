@@ -7,20 +7,36 @@ package jdominion.card;
  */
 public interface Card {
 
-    public String name();
+    public String getName();
 
-	public int cost();
+    public void setName(String name);
 
-	public int cards();
+	public int getCost();
 
-	public int actions();
+    public void setCost(int cost);
 
-	public int buys();
+	public int getCards();
 
-	public int coins();
+    public void setCards(int cards);
 
-	public int victoryPoints();
+	public int getActions();
+
+    public void setActions(int actions);
+
+	public int getBuys();
+
+    public void setBuys(int buys);
+
+	public int getCoins();
+
+    public void setCoins(int coins);
+
+	public int getVictoryPoints();
+
+    public void setVictoryPoints(int victoryPoints);
 
     public CardType getCardType();
+
+    public void setCardType(CardType cardType);
 
 }

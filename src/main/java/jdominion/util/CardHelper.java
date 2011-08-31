@@ -3,14 +3,10 @@ package jdominion.util;
 import jdominion.card.Card;
 import jdominion.card.CardPile;
 import jdominion.card.CardProperties;
-import jdominion.serialization.CardSerialization;
-import jdominion.serialization.Serialization;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class CardHelper {
 
@@ -21,22 +17,22 @@ public class CardHelper {
         return new CardPile(new ArrayList<Card>());
     }
 
-	public static List<Card> getCards(List<String> relativePaths,
-			Serialization serialization) throws Exception {
-		List<Card> cards = new ArrayList<Card>();
+//	public static List<Card> getCards(List<String> relativePaths,
+//			Serialization serialization) throws Exception {
+//		List<Card> cards = new ArrayList<Card>();
+//
+//		for (String relativePath : relativePaths) {
+//			cards.add(getCard("/" + relativePath, serialization));
+//		}
+//
+//		return cards;
+//	}
 
-		for (String relativePath : relativePaths) {
-			cards.add(getCard("/" + relativePath, serialization));
-		}
-
-		return cards;
-	}
-
-	public static Card getCard(String relativePath, Serialization serialization)
-			throws Exception {
-		return CardSerialization.deserializeCard(ResourceHelper
-                .getResource(relativePath), serialization);
-	}
+//	public static Card getCard(String relativePath, Serialization serialization)
+//			throws Exception {
+//		return CardSerialization.deserializeCard(ResourceHelper
+//                .getResource(relativePath), serialization);
+//	}
 
 	public static List<String> getCardRelativePaths(String cardSet)
 			throws IOException {
@@ -60,17 +56,17 @@ public class CardHelper {
 				.getCardSetsDirPath());
 	}
 
-	public static Map<String, List<Card>> getCardSetMap(
-			Serialization serialization) throws Exception {
-		Map<String, List<Card>> cardSets = new HashMap<String, List<Card>>();
-
-		for (String cardSetDirName : getCardSetDirNames()) {
-			cardSets.put(cardSetDirName, getCards(
-					getCardRelativePaths(cardSetDirName), serialization));
-		}
-
-		return cardSets;
-	}
+//	public static Map<String, List<Card>> getCardSetMap(
+//			Serialization serialization) throws Exception {
+//		Map<String, List<Card>> cardSets = new HashMap<String, List<Card>>();
+//
+//		for (String cardSetDirName : getCardSetDirNames()) {
+//			cardSets.put(cardSetDirName, getCards(
+//					getCardRelativePaths(cardSetDirName), serialization));
+//		}
+//
+//		return cardSets;
+//	}
 
 	public static int getNumberOfActionCards(CardPile cardPile) {
 //		int actionCardCount = 0;
@@ -87,7 +83,7 @@ public class CardHelper {
 	public static int getNumberOfActions(CardPile cardPile) {
 //		int actionCount = 0;
 //		for (Card card : cardPile) {
-//			actionCount += card.actions();
+//			actionCount += card.getActions();
 //		}
 //
 //		return actionCount;
@@ -97,7 +93,7 @@ public class CardHelper {
 	public static int getNumberOfBuys(CardPile cardPile) {
 //		int buyCount = 0;
 //		for (Card card : cardPile) {
-//			buyCount += card.buys();
+//			buyCount += card.getBuys();
 //		}
 //
 //		return buyCount;
@@ -105,10 +101,10 @@ public class CardHelper {
 	}
 
     /**
-     * Produces a specified number of identical cards.
+     * Produces a specified number of identical getCards.
      * @param card The card to duplicate.
-     * @param number The number of cards to produce
-     * @return A list of cards comprised of a given number of a given card.
+     * @param number The number of getCards to produce
+     * @return A list of getCards comprised of a given number of a given card.
      */
     public static List<Card> duplicateCard(Card card, int number) {
         List<Card> cards = new ArrayList<Card>(number);

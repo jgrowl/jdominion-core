@@ -1,27 +1,26 @@
 package jdominion;
 
-import jdominion.card.Card;
-import jdominion.card.CardMerchant;
-import jdominion.card.CardPile;
-import jdominion.card.StandardCard;
+import com.google.inject.Injector;
+import jdominion.card.*;
 import jdominion.condition.Condition;
-import jdominion.factory.InjectorFactory;
 import jdominion.factory.JDominionFactory;
+import jdominion.serialization.Serialization;
+import jdominion.serialization.xml.SimpleXmlSerialization;
 import jdominion.util.CardHelper;
 import jdominion.util.GameHelper;
-import org.junit.Assert;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * Created by IntelliJ IDEA.
  * User: jonathan
  * Date: 3/6/11
  * Time: 12:00 AM
- * To change this template use File | Settings | File Templates.
  */
 public class TestHelper {
 
@@ -51,7 +50,7 @@ public class TestHelper {
         CardMerchant cardMerchant = getAnonymousCardMerchant();
         while(cardMerchant.getCardsForSale().size() > 0) {
             Card card = cardMerchant.getCardsForSale().get(0);
-            cardMerchant.buyCard(card, card.cost());
+            cardMerchant.buyCard(card, card.getCost());
         }
 
         return cardMerchant;
@@ -110,6 +109,29 @@ public class TestHelper {
 
     public static CardPile getEmptyCardPile() {
         return new CardPile(new ArrayList<Card>(0));
+    }
+
+    public static File getAnonymousFile() throws IOException {
+        final String PREFIX = "anonymous-file";
+        final String SUFFIX = ".tmp";
+
+        return File.createTempFile(PREFIX, SUFFIX);
+    }
+
+    public static File getAnonymousFolder() throws IOException {
+        File anonymousFolder = getAnonymousFile();
+        anonymousFolder.delete();
+        anonymousFolder.mkdir();
+
+        return anonymousFolder;
+    }
+
+    public static Card getAnonymousCard(Injector injector) {
+        Card card = injector.getInstance(Card.class);
+        card.setCardType(CardType.VICTORY);
+        card.setName("fake-card");
+
+        return card;
     }
 
 }

@@ -9,8 +9,8 @@ public class App {
 	public static void main(String[] args) {
 		try {
 //
-//			Map<String, AbstractCard> cards = new HashMap<String, AbstractCard>();
-//			cards.put(vc.name, vc);
+//			Map<String, AbstractCard> getCards = new HashMap<String, AbstractCard>();
+//			getCards.put(vc.getName, vc);
 
 //			File file = new File("C:/Users/jonathan/workspace/jdominion-core/src/main/resources/card-sets/required-set/copper.xml");
 //			System.out.println(CardHelper.deserializeCard(ResourceHelper.getResource("/card-sets/required-set/copper.xml"), new SimpleXmlSerialization()));
@@ -29,22 +29,22 @@ public class App {
 			
 //			CardSetIndex index = new CardSetIndex();
 //			List<CardSet> sets = new ArrayList<CardSet>();
-//			List<String> cards = new ArrayList<String>();
-//			cards.add("card1");
-//			cards.add("card2");
+//			List<String> getCards = new ArrayList<String>();
+//			getCards.add("card1");
+//			getCards.add("card2");
 //			
-//			CardSet test1 = new CardSet("test1", cards);
+//			CardSet test1 = new CardSet("test1", getCards);
 //			sets.add(test1);
 //			index.setCardSets(sets);
 			
 //
 //			AbstractCard card = new TreasureCard();
-//			card.actions=1;
-//			card.name="gold";
-//			List<AbstractCard> cards = new ArrayList<AbstractCard>();
-//			cards.add(card);
+//			card.getActions=1;
+//			card.getName="gold";
+//			List<AbstractCard> getCards = new ArrayList<AbstractCard>();
+//			getCards.add(card);
 //			CardSet mySet = new CardSet();
-//			mySet.setCards(cards);
+//			mySet.setCards(getCards);
 //			mySet.setName("my set");
 //			
 //

@@ -20,7 +20,7 @@ public class ActionPhaseState extends PhaseState {
 	public void playCardAtIndex(GameMachine gameMachine, int cardIndex) {
 		if (getRemaining(gameMachine.getCurrentPlayer().getTotalActions()) <= 0) {
 			throw new IllegalStateException(
-					"Card cannot be played when there are no more actions left.");
+					"Card cannot be played when there are no more getActions left.");
 		}
 		// throw error if the card is not an action card
 

@@ -13,10 +13,12 @@ import static jdominion.TestHelper.*;
 
 public class QuickTest {
 
-    @Test
-    public void canCreateActionPhase() {
-        JDominionFactory.createActionPhaseState(getUniquePlayer(),
-                getAnonymousCardMerchant());
-    }
+//    @Test
+//    public void canCreateActionPhase() {
+//        JDominionFactory.createActionPhaseState(getUniquePlayer(),
+//                getAnonymousCardMerchant());
+//    }
+
+
 
 }

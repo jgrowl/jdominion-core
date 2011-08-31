@@ -23,10 +23,10 @@ public class BuyPhaseState extends PhaseState {
 	public void buyCard(GameMachine gameMachine, Card card) {
 		if (currentPlayer.getTotalBuys() <= 0) {
 			throw new IllegalStateException(
-					"Card cannot be bought when there are no more buys left.");
+					"Card cannot be bought when there are no more getBuys left.");
 		}
 
-		coinsSpent += card.cost();
+		coinsSpent += card.getCost();
 		Card purchasedCard = cardMerchant.buyCard(card, getCoinsLeft());
 
 		currentPlayer.discardCard(purchasedCard);

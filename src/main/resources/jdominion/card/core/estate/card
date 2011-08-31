@@ -1,0 +1,10 @@
+<card>
+    <name>estate</name>
+    <cost>2</cost>
+    <cards>0</cards>
+    <actions>0</actions>
+    <buys>0</buys>
+    <coins>0</coins>
+    <victoryPoints>1</victoryPoints>
+    <cardType>VICTORY</cardType>
+</card>

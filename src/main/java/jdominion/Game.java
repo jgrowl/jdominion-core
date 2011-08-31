@@ -10,9 +10,9 @@ public class Game {
 //		players.add(player1);
 //		players.add(player2);
 //
-//		Map<AbstractCard, CardPile> cards = new HashMap<AbstractCard, CardPile>();
+//		Map<AbstractCard, CardPile> getCards = new HashMap<AbstractCard, CardPile>();
 //
-//		CardMerchant cardMerchant = new CardMerchant(cards);
+//		CardMerchant cardMerchant = new CardMerchant(getCards);
 //
 //		GameMachine gameMachine = new ObservableGameMachine(
 //				new StandardGameMachine(players, cardMerchant));

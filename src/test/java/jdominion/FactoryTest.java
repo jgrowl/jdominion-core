@@ -16,6 +16,6 @@ public class FactoryTest {
 
     @Test
     public void canCreateCardFromXml() {
-        JDominionFactory.createCard(FileHelper.
+//        JDominionFactory.createCard(FileHelper.
     }
 }

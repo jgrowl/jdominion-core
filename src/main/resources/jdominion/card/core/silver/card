@@ -1,0 +1,10 @@
+<card>
+    <name>silver</name>
+    <cost>3</cost>
+    <cards>0</cards>
+    <actions>0</actions>
+    <buys>0</buys>
+    <coins>2</coins>
+    <victoryPoints>0</victoryPoints>
+    <cardType>TREASURE</cardType>
+</card>

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Maintains all cards for sale.
+ * Maintains all getCards for sale.
  * 
  * @author jonathan
  * 
@@ -13,20 +13,20 @@ import java.util.Map;
 public interface CardMerchant {
 
 	/**
-	 * Gets all available cards currently in stock.
+	 * Gets all available getCards currently in stock.
 	 *
 	 * @return
 	 */
 	public List<Card> getCardsInStock();
 
 	/**
-	 * Gets all available cards currently in stock that could be bought for a
+	 * Gets all available getCards currently in stock that could be bought for a
 	 * given price.
 	 *
 	 * @param coins
 	 *            The amount that is available to spend
 	 *
-	 * @return A list of cards that could be bought given a specified maximum
+	 * @return A list of getCards that could be bought given a specified maximum
 	 *         amount.
 	 */
 	public List<Card> getCardsInStockForCoins(int coins);
@@ -49,7 +49,7 @@ public interface CardMerchant {
     public int getNumberOfDepletedPiles();
 
     /**
-     * Gets a list of all cards for sale at merchant.
+     * Gets a list of all getCards for sale at merchant.
      *
      * @return List of Cards for sale.
      */

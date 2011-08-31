@@ -1,10 +1,7 @@
 package jdominion.util;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.google.inject.Module;
-
 import java.io.*;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +11,20 @@ public class ResourceHelper {
 		return new InputStreamReader(ResourceHelper.class
 				.getResourceAsStream((relativePath)));
 	}
+
+    public static URL getResourceUrl(String path) {
+        return ResourceHelper.class.getResource(path);
+    }
+
+    public static File getResourceFile(String path) throws FileNotFoundException {
+        URL resourceUrl = getResourceUrl(path);
+        if(resourceUrl == null) {
+            throw new FileNotFoundException(path);
+        }
+
+        return new File(resourceUrl.getFile());
+    }
+
 
 	/**
 	 * http://www.xinotes.org/notes/note/225/

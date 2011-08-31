@@ -1,0 +1,10 @@
+<card>
+    <name>duchy</name>
+    <cost>5</cost>
+    <cards>0</cards>
+    <actions>0</actions>
+    <buys>0</buys>
+    <coins>0</coins>
+    <victoryPoints>3</victoryPoints>
+    <cardType>VICTORY</cardType>
+</card>

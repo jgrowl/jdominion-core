@@ -1,0 +1,10 @@
+<card>
+    <name>province</name>
+    <cost>8</cost>
+    <cards>0</cards>
+    <actions>0</actions>
+    <buys>0</buys>
+    <coins>0</coins>
+    <victoryPoints>6</victoryPoints>
+    <cardType>VICTORY</cardType>
+</card>

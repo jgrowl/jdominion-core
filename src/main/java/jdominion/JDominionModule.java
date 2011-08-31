@@ -2,16 +2,12 @@ package jdominion;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.assistedinject.FactoryModuleBuilder;
-import jdominion.card.Card;
-import jdominion.card.CardMerchant;
-import jdominion.card.StandardCard;
-import jdominion.card.StandardCardMerchant;
+import jdominion.card.*;
 import jdominion.factory.*;
 import jdominion.state.ActionPhaseState;
 import jdominion.state.BuyPhaseState;
 
 /**
- * Created by IntelliJ IDEA.
  * User: jonathan
  * Date: 2/28/11
  * Time: 8:28 PM
@@ -22,7 +18,7 @@ public class JDominionModule extends AbstractModule {
     protected void configure() {
 
         install(new FactoryModuleBuilder()
-                .implement(Card.class, StandardCard.class)
+                .implement(Card.class, JDominionCard.class)
                 .build(CardFactory.class));
 
         install(new FactoryModuleBuilder()
@@ -42,6 +38,9 @@ public class JDominionModule extends AbstractModule {
                 .implement(Player.class, StandardPlayer.class)
                 .build(PlayerFactory.class));
 
+        install(new FactoryModuleBuilder()
+                .implement(CardSet.class, JDominionCardSet.class)
+                .build(CardSetFactory.class));
     }
 
 }

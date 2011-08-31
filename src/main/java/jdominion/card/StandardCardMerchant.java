@@ -4,7 +4,6 @@ import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -34,7 +33,7 @@ public class StandardCardMerchant implements CardMerchant {
     }
 
     /**
-     * Gets all available cards currently in stock.
+     * Gets all available getCards currently in stock.
      *
      * @return
      */
@@ -43,19 +42,19 @@ public class StandardCardMerchant implements CardMerchant {
     }
 
     /**
-     * Gets all available cards currently in stock that could be bought for a
+     * Gets all available getCards currently in stock that could be bought for a
      * given price.
      *
      * @param coins
      *            The amount that is available to spend
      *
-     * @return A list of cards that could be bought given a specified maximum
+     * @return A list of getCards that could be bought given a specified maximum
      *         amount.
      */
     public List<Card> getCardsInStockForCoins(int coins) {
         List<Card> cardsInStock = new ArrayList<Card>();
         for (Card cardForSale : getCardsForSale()) {
-            if (cardForSale.cost() <= coins) {
+            if (cardForSale.getCost() <= coins) {
                 cardsInStock.add(cardForSale);
             }
         }
@@ -72,9 +71,9 @@ public class StandardCardMerchant implements CardMerchant {
      * @return The card bought.
      */
     public Card buyCard(Card card, int coins) {
-        if (coins < card.cost()) {
+        if (coins < card.getCost()) {
             throw new IllegalArgumentException(
-                    "Card cannot be bought when there are not enough coins left.");
+                    "Card cannot be bought when there are not enough getCoins left.");
         }
 
         return cardPiles.get(card).drawCard();

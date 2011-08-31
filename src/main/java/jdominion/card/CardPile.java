@@ -14,24 +14,24 @@ import java.util.List;
 public class CardPile implements Iterable<Card> {
 
 	/**
-	 * Contains all cards currently in the pile.
+	 * Contains all getCards currently in the pile.
 	 */
 	protected List<Card> cards;
 
 	/**
-	 * Determines if a pile still has cards remaining in it.
+	 * Determines if a pile still has getCards remaining in it.
 	 * 
-	 * @return true if the pile still has cards in it, false otherwise.
+	 * @return true if the pile still has getCards in it, false otherwise.
 	 */
 	public boolean hasCards() {
 		return cards.isEmpty();
 	}
 
 	/**
-	 * Constructor allows injection of a list of cards.
+	 * Constructor allows injection of a list of getCards.
 	 * 
 	 * @param cards
-	 *            The cards in the CardPile.
+	 *            The getCards in the CardPile.
 	 */
 	public CardPile(List<Card> cards) {
 		this.cards = cards;
@@ -58,7 +58,7 @@ public class CardPile implements Iterable<Card> {
 	}
 
 	/**
-	 * Moves cards from a CardPile to this Cardpile.
+	 * Moves getCards from a CardPile to this Cardpile.
 	 * 
 	 * Postconditions: Cards will be added to this CardPile, but will not remain
 	 * in passed CardPile.
@@ -97,7 +97,7 @@ public class CardPile implements Iterable<Card> {
 
 	@Override
 	public String toString() {
-		return "CardPile [cards=" + cards + "]";
+		return "CardPile [getCards=" + cards + "]";
 	}
 
 	/**

@@ -11,6 +11,7 @@ import jdominion.card.CardPile;
 import jdominion.state.ActionPhaseState;
 import jdominion.state.BuyPhaseState;
 
+import java.io.File;
 import java.util.List;
 import java.util.Map;
 
@@ -20,6 +21,8 @@ import java.util.Map;
  * Time: 4:48 PM
  */
 public class JDominionFactory {
+
+    private static Injector injector;
 
     @Inject
     private static StateFactory stateFactory;
@@ -37,7 +40,7 @@ public class JDominionFactory {
     private static CardFactory cardFactory;
 
     static {
-        Injector injector = InjectorFactory.getInjector();
+        injector = InjectorFactory.getInjector();
         stateFactory = injector.getInstance(StateFactory.class);
         gameMachineFactory = injector.getInstance(GameMachineFactory.class);
         cardMerchantFactory = injector.getInstance(CardMerchantFactory.class);
@@ -78,8 +81,8 @@ public class JDominionFactory {
         return playerFactory.createPlayer(deck, discardPile, hand, stage);
     }
 
-    public static Card createCard(String path, String cardName) {
-        return cardFactory.createCard(path, cardName);
+    public static Card createCard(File cardFile) {
+        return cardFactory.createCard(cardFile);
     }
 
 }
